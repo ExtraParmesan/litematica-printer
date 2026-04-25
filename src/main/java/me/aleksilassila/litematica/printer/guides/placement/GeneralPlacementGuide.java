@@ -35,7 +35,7 @@ public class GeneralPlacementGuide extends PlacementGuide {
     }
 
     protected boolean getRequiresSupport() {
-        return false;
+        return !state.targetState.canPlaceAt(state.world, state.blockPos);
     }
 
     protected boolean getRequiresExplicitShift() {
